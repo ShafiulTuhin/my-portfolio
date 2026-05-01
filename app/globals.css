@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-tertiary-fixed-dim: #bec6e0;
+  --color-surface-container-highest: #2e3447;
+  --color-on-tertiary-fixed-variant: #3f465c;
+  --color-on-secondary: #3c0091;
+  --color-on-error: #690005;
+  --color-surface-container: #191f31;
+  --color-secondary: #d0bcff;
+  --color-outline-variant: #3b494b;
+  --color-inverse-on-surface: #2a3043;
+  --color-background: #0c1324;
+  --color-secondary-fixed: #e9ddff;
+  --color-outline: #849495;
+  --color-surface: #0c1324;
+  --color-secondary-fixed-dim: #d0bcff;
+  --color-on-secondary-fixed-variant: #5516be;
+  --color-surface-tint: #00dbe9;
+  --color-error: #ffb4ab;
+  --color-on-secondary-fixed: #23005c;
+  --color-secondary-container: #571bc1;
+  --color-on-secondary-container: #c4abff;
+  --color-tertiary-fixed: #dae2fd;
+  --color-on-surface-variant: #b9cacb;
+  --color-on-primary-container: #006970;
+  --color-inverse-primary: #006970;
+  --color-on-primary: #00363a;
+  --color-primary-fixed: #7df4ff;
+  --color-on-primary-fixed-variant: #004f54;
+  --color-error-container: #93000a;
+  --color-inverse-surface: #dce1fb;
+  --color-on-tertiary: #283044;
+  --color-primary: #dbfcff;
+  --color-surface-container-low: #151b2d;
+  --color-primary-container: #00f0ff;
+  --color-on-tertiary-container: #575e75;
+  --color-tertiary-container: #d1d9f3;
+  --color-surface-bright: #33394c;
+  --color-surface-variant: #2e3447;
+  --color-on-error-container: #ffdad6;
+  --color-on-background: #dce1fb;
+  --color-on-surface: #dce1fb;
+  --color-surface-dim: #0c1324;
+  --color-primary-fixed-dim: #00dbe9;
+  --color-on-primary-fixed: #002022;
+  --color-surface-container-lowest: #070d1f;
+  --color-tertiary: #f5f5ff;
+  --color-surface-container-high: #23293c;
+  --color-on-tertiary-fixed: #131b2e;
+
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-label-mono: "Space Grotesk", sans-serif;
+  --font-headline-xl: "Space Grotesk", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+
+  --spacing-section-padding: 120px;
+  --spacing-base: 8px;
+  --spacing-stack-sm: 12px;
+  --spacing-stack-md: 24px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-stack-lg: 48px;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-background text-on-background;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #dbfcff, #00dbe9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input,
+textarea {
+  background: rgba(25, 31, 49, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #dce1fb !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00f0ff !important;
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2) !important;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.material-symbols-outlined {
+  font-size: 24px;
+  display: inline-block;
 }
