@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
             </h3>
 
             <p className="text-sm text-slate-400 leading-relaxed">
-              {project.description}
+              {project.initial}
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -62,35 +62,8 @@ const ProjectCard = ({ project }) => {
               ))}
             </div>
           </div>
-
-          {/* BUTTONS */}
-          {/* <div className="flex gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all"
-            >
-              <FaGithub />
-              GitHub
-            </motion.a>
-
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all"
-            >
-              <CgLivePhoto />
-              Live
-            </motion.a>
-          </div> */}
           <Link href={`projects/${project.id}`}>
-            <button className="w-full py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all">
+            <button className="w-full py-2 border border-primary-container/30 text-primary-container font-label-mono text-[16px] uppercase tracking-widest hover:bg-primary-container/10 transition-all">
               Details
             </button>
           </Link>
