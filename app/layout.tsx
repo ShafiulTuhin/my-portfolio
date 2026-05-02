@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "DEV_ARCHITECT | Architecting Digital Performance",
+  title: "SHAFIUL TUHIN | Web Developer",
   description:
-    "Senior Software Engineer specializing in low-latency architectures and premium interface engineering.",
+    "Portfolio of Shafiul Tuhin, a passionate web developer specializing in modern web applications, interactive UI, and full-stack development using Next.js, TypeScript, and modern frontend tools.",
 };
 
 export default function RootLayout({

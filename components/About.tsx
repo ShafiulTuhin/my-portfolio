@@ -99,18 +99,20 @@ export default function About() {
           {/* TEXT */}
           <div className="space-y-6">
             <p className="about-text font-body-lg text-lg text-on-surface-variant leading-relaxed">
-              I am a Senior Web Developer with over 8 years of experience in
-              engineering high-performance digital environments. My core focus
-              lies in bridging the gap between sophisticated backend logic and
-              premium, user-centric interfaces.
+              I’m Shafiul Azam Tuhin, a passionate web developer from Bangladesh
+              who enjoys building modern, responsive, and user-focused web
+              applications. I love transforming ideas into interactive digital
+              experiences using technologies like Next.js, TypeScript, and
+              modern frontend tools.
             </p>
 
             <p className="about-text font-body-lg text-lg text-on-surface-variant leading-relaxed">
-              Specializing in distributed systems and low-latency architectures,
-              I architect solutions that are built to scale. From fintech
-              protocols to decentralized infrastructure, I approach every
-              project with technical precision and a commitment to engineering
-              excellence.
+              Working on new and challenging projects excites me because it
+              helps me grow both creatively and technically. I’m always eager to
+              learn emerging technologies, improve my problem-solving skills,
+              and create applications that leave a lasting impression. My goal
+              is to build meaningful products that combine clean design, smooth
+              performance, and real-world impact.
             </p>
           </div>
 
@@ -118,23 +120,23 @@ export default function About() {
           <div className="grid grid-cols-2 gap-8 pt-4">
             <div className="about-card">
               <h4 className="font-label-mono text-sm text-primary-container mb-2 uppercase">
-                Core Principles
+                Core Strengths
               </h4>
               <ul className="font-body-md text-sm text-slate-400 space-y-1">
-                <li>• Scalable Architecture</li>
-                <li>• Sub-100ms Latency</li>
-                <li>• Security-First Design</li>
+                <li>• Responsive UI Design</li>
+                <li>• Interactive Animations</li>
+                <li>• Clean & Scalable Code</li>
               </ul>
             </div>
 
             <div className="about-card">
               <h4 className="font-label-mono text-sm text-primary-container mb-2 uppercase">
-                Industry Focus
+                Development Focus
               </h4>
               <ul className="font-body-md text-sm text-slate-400 space-y-1">
-                <li>• FinTech Solutions</li>
-                <li>• Web3 & Cloud Infra</li>
-                <li>• Enterprise SaaS</li>
+                <li>• Full Stack Web Apps</li>
+                <li>• Modern Frontend Development</li>
+                <li>• User-Centered Experiences</li>
               </ul>
             </div>
           </div>

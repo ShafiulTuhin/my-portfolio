@@ -20,14 +20,31 @@ export default function Contact() {
 
           <div className="flex lg:flex-col gap-6">
             {[
-              { icon: "public", label: "Facebook" },
-              { icon: "hub", label: "LinkedIn" },
-              { icon: "mail", label: "Gmail" },
-              { icon: "terminal", label: "GitHub" },
+              {
+                icon: "public",
+                label: "Facebook",
+                link: "https://www.facebook.com/shafiul.tuhin",
+              },
+              {
+                icon: "hub",
+                label: "LinkedIn",
+                link: "https://www.linkedin.com/in/shafiul-tuhin/",
+              },
+              {
+                icon: "mail",
+                label: "Gmail",
+                link: "mailto:shafiulazam@gmail.com",
+              },
+              {
+                icon: "terminal",
+                label: "GitHub",
+                link: "https://github.com/ShafiulTuhin",
+              },
             ].map((social, i) => (
               <motion.a
                 key={i}
-                href="#"
+                href={social.link}
+                target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, x: -20 }}

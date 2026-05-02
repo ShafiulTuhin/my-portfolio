@@ -13,7 +13,10 @@ export default function Home() {
     <main className="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
       <Navbar />
       <div className="pt-24">
-        <Hero />
+        <section id="hero">
+          <Hero />
+        </section>
+
         <About />
         <section id="projects">
           <Projects />
@@ -31,7 +34,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-section-padding px-6">
+        {/* <section className="py-section-padding px-6">
           <div className="max-w-4xl mx-auto glass-card rounded-2xl p-12 text-center relative overflow-hidden">
             <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary-container/20 blur-[80px] rounded-full"></div>
             <h2 className="font-headline-lg text-4xl text-white mb-6 relative z-10">
@@ -47,7 +50,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
       <Footer />
     </main>

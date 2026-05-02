@@ -6,6 +6,7 @@ import HeroImg from "../public/hero.png";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FaDownload, FaGithub } from "react-icons/fa";
 
 const words = ["Web", "Development"];
 
@@ -136,7 +137,15 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="bg-primary-container text-on-primary px-8 py-4 font-label-mono text-sm uppercase font-bold tracking-widest transition-all hover:brightness-110"
           >
-            View System Specs
+            <a
+              href="https://drive.google.com/file/d/1VHnBBRzveLe418GrAgghHgY7gBbOy7WH/view?usp=sharing"
+              target="_blank"
+            >
+              <span className="flex gap-3 items-center">
+                <FaDownload />
+                Download CV
+              </span>
+            </a>
           </motion.button>
 
           <motion.button
@@ -144,7 +153,12 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="border border-white/10 glass-card px-8 py-4 font-label-mono text-sm uppercase tracking-widest hover:border-primary-container transition-all"
           >
-            GitHub Protocol
+            <a href="https://github.com/ShafiulTuhin" target="_blank">
+              <span className="flex gap-3 items-center">
+                <FaGithub />
+                GitHub Protocol
+              </span>
+            </a>
           </motion.button>
         </motion.div>
       </div>

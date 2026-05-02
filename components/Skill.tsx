@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 
 const frontendSkills = [
+  "HTML 5",
+  "CSS 3",
   "React.js",
   "Next.js",
   "TypeScript",
   "Tailwind",
+  "daisy UI",
+  "Hero UI",
   "Framer Motion",
   "GSAP Basics",
 ];

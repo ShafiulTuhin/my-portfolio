@@ -1,114 +1,57 @@
-// import Image from "next/image";
-
-// const projects = [
-//   {
-//     title: "Quantum Ledger",
-//     type: "FinTech",
-//     image:
-//       "https://lh3.googleusercontent.com/aida-public/AB6AXuAZOmymVFZCmDTSh86rN7Azztr35KBlzSa51re6CzrfCxoBxMvFO5NZYmgPDHJwP91EOwHmJICBiA4NqwRd5d5a7C9QGPqrfK0YOqlLojfcx662dcnK0UZLgxXsa1mCVvtwwYx69VVmjbvUoGM2cbw5ZkG1Xg4WfdDcZVHUgjNgPfbxoSUzCr_fABOWgFhu2AK6wXLRFqwZE0YLWhlzy5bFuhLXhWRWJ-H3efkQXe0IWFwhOH8KISmMSPPqFU8RZOrKNA0pzW4KkDc",
-//   },
-//   {
-//     title: "Nexus Nodes",
-//     type: "Web3",
-//     image:
-//       "https://lh3.googleusercontent.com/aida-public/AB6AXuB_CjFYrEe5ID7bjc6A3GZKbB4MqoRFLq9rLqYJPIIQFo1_tlsG-pef7MvoyfaME8BANKcBXwJVSketeY8kSWR0n1K_wLJvUq4gD-5SGayGDtMsA02v9BZPCLb29u2xZV2ovikhYbS80ADCBJ1HEY7jErcajtmxCfxXPeLzae2F8EhlSHkucptkro6WQMCGt7yLibdUt8I4XUvsy2c3wZ_VlXivzhWTm1rAhDTcPm-agsXGGphUuYKf8pSLLavc8fZs6eqk7FOMSKE",
-//   },
-//   {
-//     title: "Ghost Firewall",
-//     type: "Security",
-//     image:
-//       "https://lh3.googleusercontent.com/aida-public/AB6AXuASWcjY5BEKDF5cmiFzwZU2bePryv7-oiTdjrWgTyrdp9VxxbUf_yaQ88VMTXHdV2rfABfwpX42fxOKGTC-4W3oPtN9rtbRAditgY6zQ7UFuYGGZpKi3Mc4FnO7P1Q8lfSOYZtS2ZxvBfDgDLKneltjtWw_RR_v_OyYBttUinqCKT2KZ7kGoo_WW87G-p-25taDOB9_zhF9YAzFqHBlNSvWjxp89FVXm1BgYmcckwdBUsUGk__2Mn1s4ZX8MbfF4eEczLyFnGVSjzY",
-//   },
-// ];
-
-// export default function Projects() {
-//   return (
-//     <section className="py-section-padding px-6 md:px-12 bg-surface-container-lowest/50">
-//       <div className="max-w-7xl mx-auto">
-//         <div className="flex justify-between items-end mb-16">
-//           <div>
-//             <h2 className="font-headline-lg text-4xl text-white mb-4">
-//               My Projects
-//             </h2>
-//             <p className="font-body-md text-sm text-on-surface-variant">
-//               Proprietary solutions and open-source contributions.
-//             </p>
-//           </div>
-//           <div className="hidden md:block">
-//             <span className="font-label-mono text-sm text-slate-500 uppercase">
-//               Archive / 2024
-//             </span>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//           {projects.map((project, index) => (
-//             <div
-//               key={index}
-//               className="glass-card rounded-xl overflow-hidden flex flex-col group"
-//             >
-//               <div className="h-64 relative">
-//                 <Image
-//                   alt={project.title}
-//                   fill
-//                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-//                   src={project.image}
-//                 />
-//                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
-//                 <div className="absolute top-4 right-4">
-//                   <span className="font-label-mono text-[10px] text-primary-container uppercase bg-slate-900/80 px-2 py-1 rounded backdrop-blur-md border border-white/5">
-//                     {project.type}
-//                   </span>
-//                 </div>
-//               </div>
-//               <div className="p-8 space-y-6">
-//                 <h3 className="font-headline-md text-2xl text-white">
-//                   {project.title}
-//                 </h3>
-//                 <div className="flex gap-4">
-//                   <a
-//                     className="flex-1 text-center py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all"
-//                     href="#"
-//                   >
-//                     GitHub
-//                   </a>
-//                   <a
-//                     className="flex-1 text-center py-2 bg-primary-container text-on-primary font-label-mono text-[10px] uppercase tracking-widest hover:brightness-110 transition-all"
-//                     href="#"
-//                   >
-//                     Live Demo
-//                   </a>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { CgLivePhoto } from "react-icons/cg";
 
 const projects = [
   {
-    title: "Quantum Ledger",
-    type: "FinTech",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAZOmymVFZCmDTSh86rN7Azztr35KBlzSa51re6CzrfCxoBxMvFO5NZYmgPDHJwP91EOwHmJICBiA4NqwRd5d5a7C9QGPqrfK0YOqlLojfcx662dcnK0UZLgxXsa1mCVvtwwYx69VVmjbvUoGM2cbw5ZkG1Xg4WfdDcZVHUgjNgPfbxoSUzCr_fABOWgFhu2AK6wXLRFqwZE0YLWhlzy5bFuhLXhWRWJ-H3efkQXe0IWFwhOH8KISmMSPPqFU8RZOrKNA0pzW4KkDc",
+    title: "Book City",
+    type: "Digital Library Platform",
+    description:
+      "Book-City is a modern full-stack digital library platform where users can explore, search, and borrow books through an interactive and user-friendly experience.",
+    image: "https://i.ibb.co.com/8LxbBgvR/Homepage.png",
+    tech: [
+      "NextJs",
+      "Tailwind Css",
+      "Hero UI",
+      "animate css",
+      "Mongodb",
+      "better-auth",
+    ],
+
+    github: "https://github.com/ShafiulTuhin/book-city",
+    live: "https://book-city.vercel.app",
   },
   {
-    title: "Nexus Nodes",
-    type: "Web3",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB_CjFYrEe5ID7bjc6A3GZKbB4MqoRFLq9rLqYJPIIQFo1_tlsG-pef7MvoyfaME8BANKcBXwJVSketeY8kSWR0n1K_wLJvUq4gD-5SGayGDtMsA02v9BZPCLb29u2xZV2ovikhYbS80ADCBJ1HEY7jErcajtmxCfxXPeLzae2F8EhlSHkucptkro6WQMCGt7yLibdUt8I4XUvsy2c3wZ_VlXivzhWTm1rAhDTcPm-agsXGGphUuYKf8pSLLavc8fZs6eqk7FOMSKE",
+    title: "Dragoon News",
+    type: "Content Management News Platform",
+    description:
+      "Dragon News is a full-stack news portal where users can browse, publish, and manage news articles with authentication and role-based access.",
+    image: "https://i.ibb.co.com/39TYDkN6/dragon.png",
+    tech: [
+      "NextJs",
+      "Tailwind Css",
+      "Hero UI",
+      "animate css",
+      "Mongodb",
+      "better-auth",
+    ],
+
+    github: "https://github.com/ShafiulTuhin/Dragon-news-next.js",
+    live: "https://dragon-news-next-js.vercel.app/",
   },
   {
-    title: "Ghost Firewall",
-    type: "Security",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuASWcjY5BEKDF5cmiFzwZU2bePryv7-oiTdjrWgTyrdp9VxxbUf_yaQ88VMTXHdV2rfABfwpX42fxOKGTC-4W3oPtN9rtbRAditgY6zQ7UFuYGGZpKi3Mc4FnO7P1Q8lfSOYZtS2ZxvBfDgDLKneltjtWw_RR_v_OyYBttUinqCKT2KZ7kGoo_WW87G-p-25taDOB9_zhF9YAzFqHBlNSvWjxp89FVXm1BgYmcckwdBUsUGk__2Mn1s4ZX8MbfF4eEczLyFnGVSjzY",
+    title: "Issue Tracker",
+    description:
+      "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
+    type: "Issue Management System",
+    image: "https://i.ibb.co.com/zVYT2Wq6/issue.png",
+    tech: ["Reactjs", "Tailwind Css", "Daisy UI", "Toastify"],
+
+    github: "https://github.com/ShafiulTuhin/issue-tracker-convert-to-react",
+    live: "https://github-issue-tracker-react.netlify.app/",
   },
 ];
 
@@ -132,12 +75,6 @@ export default function Projects() {
             <p className="font-body-md text-sm text-on-surface-variant">
               Proprietary solutions and open-source contributions.
             </p>
-          </div>
-
-          <div className="hidden md:block">
-            <span className="font-label-mono text-sm text-slate-500 uppercase">
-              Archive / 2024
-            </span>
           </div>
         </motion.div>
 
@@ -178,7 +115,7 @@ export default function Projects() {
               </div>
 
               {/* CONTENT */}
-              <div className="p-8 space-y-6">
+              {/* <div className="p-8 space-y-6">
                 <h3 className="font-headline-md text-2xl text-white">
                   {project.title}
                 </h3>
@@ -199,6 +136,61 @@ export default function Projects() {
                     className="flex-1 text-center py-2 bg-primary-container text-on-primary font-label-mono text-[10px] uppercase tracking-widest hover:brightness-110 transition-all"
                     href="#"
                   >
+                    Live Demo
+                  </motion.a>
+                </div>
+              </div> */}
+              {/* CONTENT */}
+              <div className="p-8 space-y-6">
+                <div className="space-y-4">
+                  <h3 className="font-headline-md text-2xl text-white">
+                    {project.title}
+                  </h3>
+
+                  {/* DESCRIPTION */}
+                  {project.description && (
+                    <p className="text-sm text-slate-400 leading-relaxed">
+                      {project.description}
+                    </p>
+                  )}
+
+                  {/* TECH STACK */}
+                  {project.tech && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((item, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 text-[10px] uppercase tracking-wider rounded-full border border-primary-container/20 bg-primary-container/5 text-primary-container font-label-mono"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex gap-4">
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-3 py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all"
+                  >
+                    <FaGithub />
+                    GitHub
+                  </motion.a>
+
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-3 py-2 border border-primary-container/30 text-primary-container font-label-mono text-[10px] uppercase tracking-widest hover:bg-primary-container/10 transition-all"
+                  >
+                    <CgLivePhoto />
                     Live Demo
                   </motion.a>
                 </div>
