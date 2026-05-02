@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "title": "Book City",
+    "type": "Digital Library Platform",
+    "description": "Book-City is a modern full-stack digital library platform where users can explore, search, and borrow books through an interactive and user-friendly experience.",
+    "image": "https://i.ibb.co.com/8LxbBgvR/Homepage.png",
+    "tech": [
+      "NextJs",
+      "Tailwind Css",
+      "Hero UI",
+      "animate css",
+      "Mongodb",
+      "better-auth"
+    ],
+    "github": "https://github.com/ShafiulTuhin/book-city",
+    "live": "https://book-city.vercel.app",
+    "overview": [
+      "Full-stack digital library system",
+      "Users can explore and search books",
+      "Borrowing system with authentication",
+      "Modern UI with responsive design",
+      "Database-driven book management"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dragoon News",
+    "type": "Content Management News Platform",
+    "description": "Dragon News is a full-stack news portal where users can browse, publish, and manage news articles with authentication and role-based access.",
+    "image": "https://i.ibb.co.com/39TYDkN6/dragon.png",
+    "tech": [
+      "NextJs",
+      "Tailwind Css",
+      "Hero UI",
+      "animate css",
+      "Mongodb",
+      "better-auth"
+    ],
+    "github": "https://github.com/ShafiulTuhin/Dragon-news-next.js",
+    "live": "https://dragon-news-next-js.vercel.app/",
+    "overview": [
+      "Full-stack news publishing platform",
+      "Role-based access control system",
+      "User authentication system",
+      "Create, edit, and manage articles",
+      "Dynamic news feed system"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Issue Tracker",
+    "type": "Issue Management System",
+    "description": "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
+    "image": "https://i.ibb.co.com/zVYT2Wq6/issue.png",
+    "tech": ["Reactjs", "Tailwind Css", "Daisy UI", "Toastify"],
+    "github": "https://github.com/ShafiulTuhin/issue-tracker-convert-to-react",
+    "live": "https://github-issue-tracker-react.netlify.app/",
+    "overview": [
+      "Bug tracking and task management system",
+      "Create, update, and delete issues",
+      "Organized workflow for developers",
+      "Real-time status tracking",
+      "Simple and fast UI for productivity"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Issue Tracker",
+    "type": "Issue Management System",
+    "description": "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
+    "image": "https://i.ibb.co.com/zVYT2Wq6/issue.png",
+    "tech": ["Reactjs", "Tailwind Css", "Daisy UI", "Toastify"],
+    "github": "https://github.com/ShafiulTuhin/issue-tracker-convert-to-react",
+    "live": "https://github-issue-tracker-react.netlify.app/",
+    "overview": [
+      "Duplicate issue tracker project entry",
+      "Task and bug management system",
+      "Developer collaboration tool",
+      "Simple CRUD operations for issues",
+      "Clean UI with fast performance"
+    ]
+  }
+]
