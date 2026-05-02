@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
-import { CgLivePhoto } from "react-icons/cg";
+
 import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
