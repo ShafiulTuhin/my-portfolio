@@ -106,7 +106,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="font-headline-xl text-5xl md:text-7xl text-gradient mb-8 leading-tight"
+          className="font-headline-xl text-4xl md:text-7xl text-gradient mb-8 leading-tight"
         >
           Hello, I am
           <br />
@@ -120,9 +120,9 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="font-body-lg text-lg text-on-surface-variant max-w-2xl mx-auto mb-12"
         >
-          Senior Software Engineer specializing in low-latency architectures,
-          distributed systems, and premium interface engineering. Based in the
-          digital frontier.
+          Full-stack web developer focused on building modern, responsive web
+          applications with clean UI, smooth animations, and scalable
+          architectures. Based in Bangladesh, building for the web.
         </motion.p>
 
         {/* BUTTONS */}
