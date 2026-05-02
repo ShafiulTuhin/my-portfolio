@@ -67,6 +67,7 @@ import ProjectCard from "./ProjectCard";
 
 const getProjects = async () => {
   const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json");
+  // const res = await fetch("/projects.json");
   const data = await res.json();
   return data;
 };
