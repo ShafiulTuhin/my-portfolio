@@ -69,20 +69,38 @@
   },
   {
     "id": 4,
-    "title": "Issue Tracker",
-    "type": "Issue Management System",
-    "initial": "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
-    "description": "Issue Tracker is a collaborative task management system designed to help developers efficiently report, track, and resolve bugs or tasks within a project. It provides an organized workflow where issues can be created, assigned, updated, and monitored in real time. The platform improves team productivity by keeping all tasks structured and visible in one place. It features a clean and responsive interface for smooth usability across devices. This project demonstrates practical implementation of CRUD operations and real-world project management concepts.",
-    "image": "https://i.ibb.co.com/zVYT2Wq6/issue.png",
-    "tech": ["Reactjs", "Tailwind Css", "Daisy UI", "Toastify"],
-    "github": "https://github.com/ShafiulTuhin/issue-tracker-convert-to-react",
-    "live": "https://github-issue-tracker-react.netlify.app/",
+    "title": "Keen-Keeper",
+    "type": "Social friendship connection platform",
+    "initial": "Keen-Keeper is a social platform designed to help friends stay connected and maintain meaningful relationships.",
+    "description": "Keen-Keeper is a social connection platform designed to help friends stay in touch and build stronger relationships over time. It allows users to connect with their friends, share updates, and maintain meaningful interactions in a simple and organized way. The platform focuses on enhancing personal relationships through consistent engagement and communication. With a clean and user-friendly interface, it makes staying connected effortless and enjoyable.",
+    "image": "https://i.ibb.co.com/zhRsXMDH/keepers.png",
+    "tech": ["nextjs", "Tailwind Css", "Daisy UI", "Toastify"],
+    "github": "https://github.com/ShafiulTuhin/keen-keeper",
+    "live": "https://keen-keeper-delta.vercel.app/",
     "overview": [
-      "Duplicate issue tracker project entry",
-      "Task and bug management system",
-      "Developer collaboration tool",
-      "Simple CRUD operations for issues",
-      "Clean UI with fast performance"
+      "Social friendship connection platform",
+      "Helps users stay connected with friends",
+      "Enables sharing updates and interactions",
+      "Focuses on building meaningful relationships",
+      "Simple and user-friendly interface"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Expense Tracker",
+    "type": "Daily Expense calculator",
+    "initial": "An Expense Tracker is a simple financial management app that helps users record, monitor, and analyze their daily income and expenses efficiently.",
+    "description": "An Expense Tracker is a financial management application designed to help users easily record, monitor, and control their daily income and expenses. It provides a clear overview of spending habits, allowing users to understand where their money goes. The app helps improve budgeting by categorizing transactions and tracking overall financial activity. With a simple and intuitive interface, it makes personal finance management easy and accessible.",
+    "image": "https://i.ibb.co.com/V0D77LVG/expense.jpg",
+    "tech": ["Reactjs", "Tailwind Css", "Toastify"],
+    "github": "https://github.com/ShafiulTuhin/Expense-tracker",
+    "live": "https://expense-tracker-lws2-2.vercel.app/",
+    "overview": [
+      "Track daily income and expenses in an organized way",
+      "Sort transactions by date, category, or amount",
+      "Helps users analyze spending habits clearly",
+      "Supports better budgeting and financial planning",
+      "Simple and intuitive interface for easy use"
     ]
   }
 ]
