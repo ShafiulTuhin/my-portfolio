@@ -122,7 +122,7 @@ export default function Hero() {
         >
           Full-stack web developer focused on building modern, responsive web
           applications with clean UI, smooth animations, and scalable
-          architectures. Based in Bangladesh, building for the web.
+          architectures. Open to working with clients and teams worldwide.
         </motion.p>
 
         {/* BUTTONS */}

@@ -33,7 +33,7 @@ export default function Contact() {
               {
                 icon: "mail",
                 label: "Gmail",
-                link: "mailto:shafiulazam@gmail.com",
+                link: "mailto:tuhin6488@gmail.com",
               },
               {
                 icon: "terminal",
