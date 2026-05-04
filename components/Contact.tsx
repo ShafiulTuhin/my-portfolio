@@ -62,6 +62,30 @@ export default function Contact() {
                 </span>
               </motion.a>
             ))}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="glass-card p-4 rounded-xl flex items-center gap-4"
+            >
+              <span className="material-symbols-outlined text-slate-400">
+                call
+              </span>
+
+              <div className="flex flex-col">
+                <span className="font-label-mono text-[20px] uppercase text-slate-400 mb-2">
+                  Get Immediately
+                </span>
+
+                <a
+                  href="tel:+8801711270867"
+                  className="text-white hover:text-primary-container transition-colors font-bold"
+                >
+                  +8801711270867
+                </a>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 
