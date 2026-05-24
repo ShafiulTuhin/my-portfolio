@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
               {project.title}
             </h3>
 
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-400 leading-relaxed line-clamp-3">
               {project.initial}
             </p>
 
@@ -55,7 +55,7 @@ const ProjectCard = ({ project }) => {
               {project.tech.map((item, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-[10px] uppercase tracking-wider rounded-full border border-primary-container/20 bg-primary-container/5 text-primary-container font-label-mono"
+                  className=" line-clamp-1 px-3 py-1 text-[10px] uppercase tracking-wider rounded-full border border-primary-container/20 bg-primary-container/5 text-primary-container font-label-mono"
                 >
                   {item}
                 </span>
