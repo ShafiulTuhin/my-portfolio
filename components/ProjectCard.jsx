@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
             <Image
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               src={project.image}
             />
           </motion.div>
