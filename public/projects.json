@@ -2,26 +2,19 @@
   {
     "id": 1,
     "title": "Book City",
-    "type": "Digital Library Platform",
-    "initial": "Book-City is a modern full-stack digital library platform where users can explore, search, and borrow books through an interactive and user-friendly experience.",
-    "description": " Book-City is a full-stack digital library platform where users can explore, search, and borrow books through a smooth and modern interface. It is designed to make book management simple and accessible, with features like authentication, borrowing system, and organized book listings. The project focuses on providing a clean user experience with a responsive UI and efficient database-driven backend for handling books and user activities.",
+    "type": "Online Bookstore UI",
+    "initial": "Book-City is a modern bookstore frontend project where users can explore, search, and view books through an interactive and user-friendly interface using mock data.",
+    "description": "Book-City is a responsive bookstore UI project built with Next.js and Tailwind CSS. Users can browse book collections, search books, and view detailed book information through a smooth and modern interface. The project focuses on reusable components, clean UI design, responsive layouts, and efficient state management using mock data without backend integration.",
     "image": "https://i.ibb.co.com/8LxbBgvR/Homepage.png",
-    "tech": [
-      "NextJs",
-      "Tailwind Css",
-      "Hero UI",
-      "animate css",
-      "Mongodb",
-      "better-auth"
-    ],
+    "tech": ["NextJs", "Tailwind CSS", "Hero UI", "Animate CSS"],
     "github": "https://github.com/ShafiulTuhin/book-city",
     "live": "https://book-city.vercel.app",
     "overview": [
-      "Full-stack digital library system",
+      "Responsive online bookstore UI",
       "Users can explore and search books",
-      "Borrowing system with authentication",
-      "Modern UI with responsive design",
-      "Database-driven book management"
+      "Dynamic book listing and detail pages",
+      "Modern UI with reusable components",
+      "Built using mock data without backend integration"
     ]
   },
   {
