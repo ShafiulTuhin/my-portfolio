@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const getProjects = async () => {
-  const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json");
+  const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
   return data;
 };

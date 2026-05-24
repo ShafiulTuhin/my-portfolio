@@ -1,17 +1,50 @@
+// import DetailsProject from "../../../components/DetailsProject";
+
+// const getProjects = async () => {
+//   const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json");
+//   const data = await res.json();
+//   return data;
+// };
+// const projects = await getProjects();
+
+// const ProjectDetailsPage = async ({ params }) => {
+//   const { id } = await params;
+//   console.log(id);
+
+//   const project = projects.find((project) => project.id == id);
+//   if (!project) {
+//     return (
+//       <div className="h-screen flex items-center justify-center text-white">
+//         Project not found
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div>
+//       <DetailsProject project={project} />
+//     </div>
+//   );
+// };
+
+// export default ProjectDetailsPage;
+
 import DetailsProject from "../../../components/DetailsProject";
 
 const getProjects = async () => {
-  const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json");
-  const data = await res.json();
-  return data;
+  const res = await fetch("https://shafiul-tuhin.vercel.app/projects.json", {
+    cache: "no-store",
+  });
+  return res.json();
 };
-const projects = await getProjects();
 
 const ProjectDetailsPage = async ({ params }) => {
   const { id } = await params;
-  console.log(id);
 
-  const project = projects.find((project) => project.id == id);
+  const projects = await getProjects();
+
+  const project = projects.find((p) => p.id == id);
+
   if (!project) {
     return (
       <div className="h-screen flex items-center justify-center text-white">
@@ -20,11 +53,7 @@ const ProjectDetailsPage = async ({ params }) => {
     );
   }
 
-  return (
-    <div>
-      <DetailsProject project={project} />
-    </div>
-  );
+  return <DetailsProject project={project} />;
 };
 
 export default ProjectDetailsPage;

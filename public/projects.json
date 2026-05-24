@@ -1,6 +1,31 @@
 [
   {
     "id": 1,
+    "title": "Medi Appointment",
+    "type": "Healthcare Appointment System",
+    "initial": "Medi Appointment is a full-stack healthcare appointment platform where users can explore doctors, book appointments, and manage schedules through a modern and user-friendly experience.",
+    "description": "Medi Appointment is a full-stack healthcare appointment management platform built with the MERN stack. Users can browse doctors, search by specialization, book appointments, and manage schedules through a responsive and interactive interface. The project includes secure backend APIs, database-driven data management, and authentication features to provide a smooth and efficient healthcare booking experience.",
+    "image": "https://i.ibb.co.com/SDfKMK4s/medi-appointment.png",
+    "tech": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT"
+    ],
+    "github": "https://github.com/ShafiulTuhin/Medical-appointment-client",
+    "live": "https://medi-appointment-client.vercel.app/",
+    "overview": [
+      "Full-stack healthcare appointment system",
+      "Users can explore and search doctors",
+      "Appointment booking and schedule management",
+      "REST API with secure backend integration",
+      "Database-driven application with responsive UI"
+    ]
+  },
+  {
+    "id": 2,
     "title": "Book City",
     "type": "Online Bookstore UI",
     "initial": "Book-City is a modern bookstore frontend project where users can explore, search, and view books through an interactive and user-friendly interface using mock data.",
@@ -18,7 +43,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Dragoon News",
     "type": "Content Management News Platform",
     "initial": "Dragon News is a full-stack news portal where users can browse, publish, and manage news articles with authentication and role-based access.",
@@ -43,7 +68,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Issue Tracker",
     "type": "Issue Management System",
     "initial": "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
@@ -61,7 +86,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Keen-Keeper",
     "type": "Social friendship connection platform",
     "initial": "Keen-Keeper is a social platform designed to help friends stay connected and maintain meaningful relationships.",
@@ -79,7 +104,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Expense Tracker",
     "type": "Daily Expense calculator",
     "initial": "An Expense Tracker is a simple financial management app that helps users record, monitor, and analyze their daily income and expenses efficiently.",
