@@ -138,7 +138,7 @@ export default function Hero() {
             className="bg-primary-container text-on-primary px-8 py-4 font-label-mono text-sm uppercase font-bold tracking-widest transition-all hover:brightness-110"
           >
             <a
-              href="https://drive.google.com/file/d/1VHnBBRzveLe418GrAgghHgY7gBbOy7WH/view?usp=sharing"
+              href="https://drive.google.com/file/d/1WzC8UDhI3Bw6ImjWSqR1yoc3IU_fCiql/view"
               target="_blank"
             >
               <span className="flex gap-3 items-center">

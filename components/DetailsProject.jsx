@@ -24,12 +24,20 @@ const DetailsProject = ({ project }) => {
           className="grid md:grid-cols-2 gap-10 items-center"
         >
           <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden glass-card">
+            {/* <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            /> */}
             <Image
               src={project.image}
               alt={project.title}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
+              unoptimized
             />
           </div>
 
