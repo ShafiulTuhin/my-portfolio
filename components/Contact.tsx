@@ -1,8 +1,69 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const id = toast.loading("Sending message...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.update(id, {
+          render: "Message sent!",
+          type: "success",
+          isLoading: false,
+          autoClose: 3000,
+        });
+
+        // ✅ RESET MUST BE HERE
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.update(id, {
+          render: "Failed to send message",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
+      }
+    } catch (error) {
+      toast.update(id, {
+        render: "Something went wrong",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
+
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section className="py-section-padding px-6 md:px-12 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
@@ -115,6 +176,7 @@ export default function Contact() {
 
           {/* FORM */}
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -131,6 +193,13 @@ export default function Contact() {
                   className="w-full px-4 py-3 rounded-lg border-white/10 focus:border-primary-container transition-all"
                   placeholder="Full Name"
                   type="text"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      name: e.target.value,
+                    })
+                  }
                 />
               </div>
 
@@ -142,6 +211,13 @@ export default function Contact() {
                   className="w-full px-4 py-3 rounded-lg border-white/10 focus:border-primary-container transition-all"
                   placeholder="Email Address"
                   type="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email: e.target.value,
+                    })
+                  }
                 />
               </div>
             </div>
@@ -155,6 +231,13 @@ export default function Contact() {
               <textarea
                 className="w-full px-4 py-3 rounded-lg border-white/10 focus:border-primary-container transition-all min-h-[150px]"
                 placeholder="Describe the mission scope..."
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    message: e.target.value,
+                  })
+                }
               />
             </div>
 
@@ -162,9 +245,9 @@ export default function Contact() {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-primary-container text-on-primary px-10 md:px-12 py-4 font-label-mono text-sm uppercase font-bold tracking-widest transition-all hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]"
+                className="w-full md:w-auto bg-primary-container text-on-primary px-10 md:px-12 py-4 font-label-mono text-sm uppercase font-bold tracking-widest transition-all hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] cursor-pointer"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </div>
           </motion.form>

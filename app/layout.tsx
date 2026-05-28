@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/providers/SmoothScrolling";
 import ClickLightning from "@/components/CLickLighting";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <ClickLightning />
         <SmoothScrolling>{children}</SmoothScrolling>
+        <ToastContainer />
       </body>
     </html>
   );
