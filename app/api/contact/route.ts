@@ -1,49 +1,179 @@
+// import { Resend } from "resend";
+
+// const apiKey = process.env.RESEND_API_KEY;
+
+// if (!apiKey) {
+//   throw new Error("RESEND_API_KEY is missing in environment variables");
+// }
+
+// const resend = new Resend(apiKey);
+
+// type ContactBody = {
+//   name: string;
+//   email: string;
+//   message: string;
+// };
+
+// export async function POST(req: Request): Promise<Response> {
+//   try {
+//     const body: ContactBody = await req.json();
+
+//     console.log("BODY:", body);
+
+//     const { name, email, message } = body;
+
+//     if (!name || !email || !message) {
+//       return Response.json(
+//         { success: false, message: "Missing required fields" },
+//         { status: 400 },
+//       );
+//     }
+
+//     // 1. EMAIL TO YOU (with replyTo so you can reply easily)
+//     const me = await resend.emails.send({
+//       from: "Portfolio Contact <onboarding@resend.dev>",
+//       to: "tuhin6488@gmail.com",
+//       replyTo: email,
+//       subject: `New Message from ${name}`,
+//       html: `
+//         <h2>New Contact Message</h2>
+//         <p><strong>Name:</strong> ${name}</p>
+//         <p><strong>Email:</strong> ${email}</p>
+//         <p><strong>Message:</strong></p>
+//         <p>${message}</p>
+//       `,
+//     });
+
+//     console.log("To me:", me);
+
+//     // 2. AUTO REPLY TO USER
+//     const cleanEmail = email?.trim();
+//     console.log(cleanEmail);
+
+//     if (!cleanEmail) {
+//       throw new Error("Invalid email for auto reply");
+//     }
+
+//     const reply = await resend.emails.send({
+//       from: "Portfolio Contact <onboarding@resend.dev>",
+//       to: cleanEmail,
+//       subject: "Thanks for contacting me!",
+//       html: `
+//     <h2>Message Received ✅</h2>
+
+//     <p>Hello ${name},</p>
+
+//     <p>I received your message successfully.</p>
+//     <p>I will get back to you as soon as possible.</p>
+
+//     <br />
+//     <p>— Md Shafiul Azam</p>
+//   `,
+//     });
+
+//     console.log("AUTO REPLY STATUS:", reply);
+
+//     return Response.json(
+//       {
+//         success: true,
+//         message: "Sent successfully",
+//       },
+//       { status: 200 },
+//     );
+//   } catch (error: unknown) {
+//     console.error("ERROR:", error);
+
+//     const message =
+//       error instanceof Error ? error.message : "Internal Server Error";
+
+//     return Response.json({ success: false, message }, { status: 500 });
+//   }
+// }
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const apiKey = process.env.RESEND_API_KEY;
 
-export async function POST(req: Request) {
+if (!apiKey) {
+  throw new Error("RESEND_API_KEY is missing in environment variables");
+}
+
+const resend = new Resend(apiKey);
+
+type ContactBody = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+export async function POST(req: Request): Promise<Response> {
   try {
-    const body = await req.json();
-
-    console.log("BODY:", body);
+    const body: ContactBody = await req.json();
 
     const { name, email, message } = body;
 
-    if (!email) {
+    if (!name || !email || !message) {
       return Response.json(
-        { success: false, message: "Email missing" },
+        { success: false, message: "Missing required fields" },
         { status: 400 },
       );
     }
 
+    const cleanEmail = email.trim();
+
+    if (!cleanEmail.includes("@")) {
+      return Response.json(
+        { success: false, message: "Invalid email" },
+        { status: 400 },
+      );
+    }
+
+    // 1. EMAIL TO YOU
     const me = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "tuhin6488@gmail.com",
+      replyTo: cleanEmail,
       subject: `New Message from ${name}`,
-      html: `<p>${message}</p>`,
+      html: `
+        <h2>New Contact Message</h2>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${cleanEmail}</p>
+        <p><b>Message:</b></p>
+        <p>${message}</p>
+      `,
     });
 
-    console.log("To me:", me);
+    console.log("EMAIL TO ME:", me);
 
-    const reply = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
-      to: email,
-      subject: "Thanks for contacting me!",
-      html: `<p>Hello ${name}, I got your message.</p>`,
-    });
+    // 2. AUTO REPLY (⚠️ WILL ONLY WORK IN PRODUCTION MODE WITH VERIFIED DOMAIN)
+    // const reply = await resend.emails.send({
+    //   from: "Portfolio Contact <onboarding@resend.dev>",
+    //   to: cleanEmail,
+    //   subject: "Thanks for contacting me!",
+    //   html: `
+    //     <h2>Message Received ✅</h2>
+    //     <p>Hello ${name},</p>
+    //     <p>I received your message successfully.</p>
+    //     <p>I will get back to you soon.</p>
+    //     <br />
+    //     <p>— Md Shafiul Azam</p>
+    //   `,
+    // });
 
-    console.log("Auto reply:", reply);
-
-    return Response.json({
-      success: true,
-      message: "Sent successfully",
-    });
-  } catch (error) {
-    console.log("ERROR:", error);
+    // console.log("AUTO REPLY:", reply);
 
     return Response.json(
-      { success: false, message: "Failed" },
+      { success: true, message: "Sent successfully" },
+      { status: 200 },
+    );
+  } catch (error: unknown) {
+    console.error("FULL ERROR:", error);
+
+    return Response.json(
+      {
+        success: false,
+        message:
+          error instanceof Error ? error.message : "Internal Server Error",
+      },
       { status: 500 },
     );
   }
