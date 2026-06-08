@@ -1,6 +1,31 @@
 [
   {
     "id": 1,
+    "title": "HireLoop",
+    "type": "Job Portal / Recruitment Platform",
+    "initial": "HireLoop is a full-stack job portal platform where employers can post jobs and candidates can apply, track applications, and manage recruitment workflows efficiently.",
+    "description": "HireLoop is a full-stack recruitment and job portal platform built with modern web technologies. It allows employers to post jobs, manage applicants, and track hiring progress, while candidates can search for jobs, apply, and monitor application status. The system includes authentication, role-based access control, secure APIs, and a responsive dashboard for both employers and job seekers.",
+    "image": "https://i.ibb.co.com/DHNTmjxd/Hire-Loop.png",
+    "tech": [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "JWT"
+    ],
+    "github": "https://github.com/ShafiulTuhin/hireloop-client",
+    "live": "https://hireloop-client-sigma.vercel.app",
+    "overview": [
+      "Full-stack job portal system",
+      "Employer and candidate role management",
+      "Job posting and application system",
+      "Authentication and secure access control",
+      "Dashboard-based recruitment workflow"
+    ]
+  },
+  {
+    "id": 2,
     "title": "Medi Appointment",
     "type": "Healthcare Appointment System",
     "initial": "Medi Appointment is a full-stack healthcare appointment platform where users can explore doctors, book appointments, and manage schedules through a modern and user-friendly experience.",
@@ -25,7 +50,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Book City",
     "type": "Online Bookstore UI",
     "initial": "Book-City is a modern bookstore frontend project where users can explore, search, and view books through an interactive and user-friendly interface using mock data.",
@@ -43,11 +68,11 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Dragoon News",
     "type": "Content Management News Platform",
     "initial": "Dragon News is a full-stack news portal where users can browse, publish, and manage news articles with authentication and role-based access.",
-    "description": "Dragon News is a full-stack content management news platform that allows users to browse, publish, and manage news articles in an organized and efficient way. It includes authentication and role-based access control, enabling different user permissions for reading and publishing content. The platform is designed with a clean and responsive UI for a smooth reading experience across all devices. Users can explore categorized news and stay updated with the latest posts. The system is built to demonstrate real-world CRUD operations and scalable news management features.",
+    "description": "Dragon News is a full-stack content management news platform that allows users to browse, publish, and manage news articles in an organized and efficient way. It includes authentication and role-based access control, enabling different user permissions for reading and publishing content. The platform is designed with a clean and responsive UI for a smooth reading experience across all devices.",
     "image": "https://i.ibb.co.com/39TYDkN6/dragon.png",
     "tech": [
       "NextJs",
@@ -68,11 +93,11 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Issue Tracker",
     "type": "Issue Management System",
     "initial": "An Issue Tracker App is a collaborative project management tool that helps developers report, track, and resolve bugs or tasks efficiently with organized workflows.",
-    "description": "Issue Tracker is a collaborative task management system designed to help developers efficiently report, track, and resolve bugs or tasks within a project. It provides an organized workflow where issues can be created, assigned, updated, and monitored in real time. The platform improves team productivity by keeping all tasks structured and visible in one place. It features a clean and responsive interface for smooth usability across devices. This project demonstrates practical implementation of CRUD operations and real-world project management concepts.",
+    "description": "Issue Tracker is a collaborative task management system designed to help developers efficiently report, track, and resolve bugs or tasks within a project. It provides an organized workflow where issues can be created, assigned, updated, and monitored in real time.",
     "image": "https://i.ibb.co.com/zVYT2Wq6/issue.png",
     "tech": ["Reactjs", "Tailwind Css", "Daisy UI", "Toastify"],
     "github": "https://github.com/ShafiulTuhin/issue-tracker-convert-to-react",
@@ -86,11 +111,11 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Keen-Keeper",
     "type": "Social friendship connection platform",
     "initial": "Keen-Keeper is a social platform designed to help friends stay connected and maintain meaningful relationships.",
-    "description": "Keen-Keeper is a social connection platform designed to help friends stay in touch and build stronger relationships over time. It allows users to connect with their friends, share updates, and maintain meaningful interactions in a simple and organized way. The platform focuses on enhancing personal relationships through consistent engagement and communication. With a clean and user-friendly interface, it makes staying connected effortless and enjoyable.",
+    "description": "Keen-Keeper is a social connection platform designed to help friends stay in touch and build stronger relationships over time.",
     "image": "https://i.ibb.co.com/zhRsXMDH/keepers.png",
     "tech": ["nextjs", "Tailwind Css", "Daisy UI", "Toastify"],
     "github": "https://github.com/ShafiulTuhin/keen-keeper",
@@ -104,11 +129,11 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Expense Tracker",
     "type": "Daily Expense calculator",
     "initial": "An Expense Tracker is a simple financial management app that helps users record, monitor, and analyze their daily income and expenses efficiently.",
-    "description": "An Expense Tracker is a financial management application designed to help users easily record, monitor, and control their daily income and expenses. It provides a clear overview of spending habits, allowing users to understand where their money goes. The app helps improve budgeting by categorizing transactions and tracking overall financial activity. With a simple and intuitive interface, it makes personal finance management easy and accessible.",
+    "description": "An Expense Tracker is a financial management application designed to help users easily record, monitor, and control their daily income and expenses.",
     "image": "https://i.ibb.co.com/V0D77LVG/expense.jpg",
     "tech": ["Reactjs", "Tailwind Css", "Toastify"],
     "github": "https://github.com/ShafiulTuhin/Expense-tracker",
